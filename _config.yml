@@ -105,7 +105,9 @@ content:
           # Established in 1636, Harvard is the oldest higher education institution in the United States, and is widely regarded in terms of its influence, reputation, and academic pedigree as a leading university in not just the US but also the world.
         description: | # this will include new lines to allow paragraphs
           During my time as an undergraduate in NTU, I was awarded the prestigious Nanyang Scholarship and the EEE Chair Award. I graduated with First Class Honours with a GPA of 4.89/5.0 and was awarded the Dean's List for AY 16/17, 17/18, 19/20.
+          
           I was active as an EEE Outreach Ambassador, reaching out to prospective students and sharing my experiences as an EEE student. I managed logistics and budgeting for the National Vertical Marathon in 2017 and 2018, a stair climbing event with over 2,000 participants.
+          
           In NTU, I had numerous opportunities to experience different cultures and travel the world: Silicon Valley Outreach Programme, Semester Exchange @ Czech Republic, Volunteering @ Remote village in Chiang Mai.
 
   - title: More About Me
@@ -117,7 +119,7 @@ content:
       - Bouldering
 
       Look at this cool image  
-      # ![Trees](images/landscape-tress.jpg "Trees")
+      # ![Trees](images/landscape-trees.jpg "Trees")
 
 # Footer
 footer_show_references: true
