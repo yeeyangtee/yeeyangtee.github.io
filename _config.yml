@@ -7,7 +7,7 @@ version: 2
 
 # Personal info
 name: Yee Yang Tee
-title: Deep Learning and AI Consultant
+title: AI Engineer | Data Scientist | Deep Learning Researcher
 email: yeeyangtee@gmail.com
 website: https://www.yeeyangtee.com
 
@@ -17,16 +17,8 @@ darkmode: false
 # Social links
 twitter_username: yeeyangtee
 github_username:  yeeyangtee
-# stackoverflow_username: "00000001"
-# dribbble_username: jekyll
-# facebook_username: jekyll
-# flickr_username: jekyll
 instagram_username: teeletubby
 linkedin_username: teeyeeyang
-# xing_username: jekyll
-# pinterest_username: jekyll
-# youtube_username: globalmtb
-# googleplus_username: +jekyll
 orcid_username: 0000-0001-6600-0685
 
 # Additional icon links
@@ -34,12 +26,8 @@ additional_links:
 # - title: itsgoingto.be
 #   icon: fas fa-globe
 #   url: https://www.itsgoingto.be
-# - title: another link
-#   icon: font awesome brand icon name (eg. fab fa-twitter) (https://fontawesome.com/icons?d=gallery&m=free)
-#   url: Link url (eg. https://google.com)
 
 # Google Analytics and Tag Manager
-# Using more than one of these may cause issues with reporting
 # gtm: "GTM-0000000"
 # gtag: "UA-00000000-0"
 # google_analytics: "UA-00000000-0"
@@ -48,67 +36,130 @@ additional_links:
 about_title: About Me
 about_profile_image: images/portrait_compress_1.jpg
 about_content: | # this will include new lines to allow paragraphs
-  Hi, Yee Yang here and I'm a professional AI and Deep Learning consultant. I am currently a final year PhD student at NTU Singapore, specializing in Computer Vision research.
+  Hi, I'm Yee Yang — an engineer, tinkerer, and lifelong learner who loves to build products, tools,
+  and explore new technologies. I am currently an AI Engineer at Balyasny Asset Management, working at
+  the intersection of machine learning and quantitative finance.
 
-  I am most skilled in <mark>PyTorch</mark> and <mark>Toothbrushing</mark>.
+  My goal in life is to learn as much as I can, solve challenging problems, and achieve things that are
+  meaningful, engaging, and valuable. I hold a PhD in Electrical and Electronic Engineering
+  (Deep Learning, Computer Vision) from NTU Singapore.
+
+  I am most skilled in <mark>PyTorch</mark>, <mark>Deep Learning</mark>, and <mark>Large Language Models</mark>.
 
 content:
-  - title: Projects # Title for the section
-    layout: list # Type of content section (list/text)
-    content:
-      - layout: top-middle
-        title: Pluribus Poker AI Bot
-        link: github.com/yeeyangtee
-        # link_text: Project Website
-        additional_links:
-          - title:  yeeyangtee/pluribus
-            icon: fab fa-github
-            url: github.com/yeeyangtee/pluribus
-          # - title:  Github page for project (eg. sproogen/modern-resume-theme)
-          #   icon: fab fa-github
-          #   url: Link to project (eg. sproogen.github.io/modern-resume-theme)
-        quote: >
-          Poker playing bot from Facebook
-        description: | # this will include new lines to allow paragraphs
-          I worked on this projet as a means to learn about reinforcement learning, and hopefully earn some money if it succeeded. 
-
   - title: Experience # Title for the section
     layout: list # Type of content section (list/text)
     content:
       - layout: left
+        title: Balyasny Asset Management
+        sub_title: Artificial Intelligence Engineer
+        caption: November 2025 - Present
+        description: | # this will include new lines to allow paragraphs
+          Working as an AI Engineer at a global multi-strategy hedge fund, applying machine learning
+          and AI techniques in a quantitative finance context.
+
+      - layout: left
+        title: American Express
+        sub_title: Data Scientist
+        caption: May 2024 - November 2025
+        description: | # this will include new lines to allow paragraphs
+          - Lead modeller in redeveloping an existing marketing model, creating new intelligence
+            driving ~US$5M annual incremental revenue.
+          - Lead modeller for building a new marketing model with estimated revenue impact of >US$30M.
+
+      - layout: left
+        title: Nanyang Technological University
+        sub_title: Researcher
+        caption: August 2020 - May 2024
+        description: | # this will include new lines to allow paragraphs
+          Pioneer candidate for the Nanyang-DSO Graduate Programme, designed to nurture technical
+          talents in cutting-edge defence and security research. Produced 8 deliverables across 4 years
+          as the key researcher in a project valued at approx. S$300K.
+
+      - layout: left
+        title: The University of Texas at Austin
+        link: vita-group.github.io
+        link_text: VITA Group
+        sub_title: Visiting Research Scholar
+        caption: August 2022 - January 2023
+        description: | # this will include new lines to allow paragraphs
+          Collaborated with the VITA research group on computer vision research during a 6-month
+          research exchange at UT Austin.
+
+      - layout: left
         title: inspections.ai
-        link: mapgage.com
+        link: inspections.ai
         link_text: inspections.ai
         sub_title: Chief Technology Officer
-        caption: Jan 2020 - Present
-        quote: >
-          Data is the new oil, and we are the drillers.
+        caption: January 2020 - January 2023
         description: | # this will include new lines to allow paragraphs
-          inspections.ai develops " Visual-AI-as-a-service", using AI in smart cameras to extract operational data from video streams. 
+          inspections.ai develops "Visual-AI-as-a-service", using ML & smart cameras to extract
+          operational data from images and video streams.
+
+          - Spearheaded technical development for 2 pilot projects with total value of approx. S$300K,
+            successfully delivered with all KPIs achieved.
+          - Developed 4 visual AI models for PPE detection, behaviour analysis, and construction
+            machinery extraction from CCTVs.
+          - Joined accelerator program @ Pier71 and connected with strategic partners in work safety
+            hazard (WSH) companies.
+
+      - layout: left
+        title: Freelance Deep Learning Consultant
+        caption: 2020 - 2023
+        description: | # this will include new lines to allow paragraphs
+          Delivered more than 10 technical projects with total value of >S$200K across domains
+          including financial modelling, trading, medical image analysis, agriculture, construction,
+          and ergonomics. Provided advisory and hands-on implementation of deep learning techniques
+          for clients.
 
   - title: Education # Title for the section
     layout: list # Type of content section (list/text)
     content:
       - layout: left
         title: Nanyang Technological University
-        caption: 2020 - Present
-        sub_title: PhD in Electrical and Electronic Engineering 
-        quote: >
-          A research-intensive public university, Nanyang Technological University, Singapore (NTU Singapore) has 33,000 undergraduate and postgraduate students in the Engineering, Business, Science, Medicine, Humanities, Arts, & Social Sciences, and Graduate colleges.
+        caption: 2020 - 2024
+        sub_title: Doctor of Philosophy (PhD), Electrical and Electronic Engineering
         description: | # this will include new lines to allow paragraphs
-          I derped around daily with <mark>PyTorch</mark>
+          Research Area: Deep Learning, Computer Vision, Integrated Circuits.
+          Pioneer candidate for the Nanyang-DSO Graduate Programme.
+
+          [Google Scholar Publications](https://scholar.google.com/citations?user=Zu60j_gAAAAJ&hl=en)
+
       - layout: left
         title: Nanyang Technological University
-        caption: 2017 - 2020
-        sub_title: BEng in Electrical and Electronic Engineering 
-        # quote: >
-          # Established in 1636, Harvard is the oldest higher education institution in the United States, and is widely regarded in terms of its influence, reputation, and academic pedigree as a leading university in not just the US but also the world.
+        caption: 2016 - 2020
+        sub_title: Bachelor of Engineering (BEng), Electrical and Electronics Engineering
         description: | # this will include new lines to allow paragraphs
-          During my time as an undergraduate in NTU, I was awarded the prestigious Nanyang Scholarship and the EEE Chair Award. I graduated with First Class Honours with a GPA of 4.89/5.0 and was awarded the Dean's List for AY 16/17, 17/18, 19/20.
-          
-          I was active as an EEE Outreach Ambassador, reaching out to prospective students and sharing my experiences as an EEE student. I managed logistics and budgeting for the National Vertical Marathon in 2017 and 2018, a stair climbing event with over 2,000 participants.
-          
-          In NTU, I had numerous opportunities to experience different cultures and travel the world: Silicon Valley Outreach Programme, Semester Exchange @ Czech Republic, Volunteering @ Remote village in Chiang Mai.
+          CGPA: 4.89 / 5.00 | Dean's List: AY 16/17, 17/18, 19/20
+
+          Awarded the prestigious Nanyang Scholarship and EEE Chair Award. Graduated with First Class
+          Honours. Active as EEE Outreach Ambassador. Semester exchange at Technical University of
+          Ostrava, Czech Republic; Silicon Valley Outreach Programme; Volunteering in Chiang Mai.
+
+  - title: Skills
+    layout: text
+    content: | # this will include new lines to allow paragraphs
+      **Machine Learning & AI:** Deep Learning · Computer Vision · Large Language Models · ML Deployment · Data Analysis · Quantitative Research
+
+      **Tools & Frameworks:** <mark>PyTorch</mark> · <mark>HuggingFace</mark> · <mark>Docker</mark> · Cloud Computing
+
+      **Other:** Data Scraping · Management Consulting · Financial Modelling
+
+  - title: Projects # Title for the section
+    layout: list # Type of content section (list/text)
+    content:
+      - layout: top-middle
+        title: Pluribus Poker AI Bot
+        link: github.com/yeeyangtee/pluribus
+        additional_links:
+          - title:  yeeyangtee/pluribus
+            icon: fab fa-github
+            url: github.com/yeeyangtee/pluribus
+        quote: >
+          Implementing Facebook's Pluribus poker-playing AI
+        description: | # this will include new lines to allow paragraphs
+          Worked on this project as a means to learn about reinforcement learning and multi-agent
+          game theory.
 
   - title: More About Me
     layout: text
@@ -117,9 +168,8 @@ content:
       - Scuba Diving
       - Hiking
       - Bouldering
-
-      Look at this cool image  
-      # ![Trees](images/landscape-trees.jpg "Trees")
+      - Ocean Conservation
+      - Overseas Volunteering
 
 # Footer
 footer_show_references: true
