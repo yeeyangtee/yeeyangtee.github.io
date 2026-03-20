@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yee Yang Tee</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="images/favicon.ico" sizes="any" /><!-- fallback for older browsers -->
+  <meta name="description" content="Yee Yang Tee — AI Engineer at Balyasny Asset Management, applying deep learning and LLMs to quantitative finance. PhD in EEE from NTU Singapore." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.yeeyangtee.com" />
+  <meta property="og:title" content="Yee Yang Tee" />
+  <meta property="og:description" content="AI Engineer applying deep learning and LLMs to quantitative finance. PhD in EEE from NTU Singapore." />
+  <meta property="og:image" content="https://www.yeeyangtee.com/images/portrait_compress_1.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@yeeyangtee" />
+  <meta name="twitter:title" content="Yee Yang Tee" />
+  <meta name="twitter:description" content="AI Engineer applying deep learning and LLMs to quantitative finance. PhD in EEE from NTU Singapore." />
+  <meta name="twitter:image" content="https://www.yeeyangtee.com/images/portrait_compress_1.jpg" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #fff;
+      --text: #222;
+      --text-secondary: #555;
+      --text-muted: #888;
+      --text-faint: #aaa;
+      --text-desc: #444;
+      --border: #e5e5e5;
+      --mark-bg: #f0f4ff;
+      --mark-color: #0044aa;
+      --link: #0066cc;
+      --card-border: #e5e5e5;
+    }
+
+    html.dark {
+      --bg: #111;
+      --text: #e8e8e8;
+      --text-secondary: #aaa;
+      --text-muted: #777;
+      --text-faint: #555;
+      --text-desc: #bbb;
+      --border: #2a2a2a;
+      --mark-bg: #1a2040;
+      --mark-color: #7aabff;
+      --link: #5599ff;
+      --card-border: #2a2a2a;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+      transition: background 0.2s, color 0.2s;
+    }
+
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 2.5rem 0 2rem;
+      position: relative;
+    }
+
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    #theme-toggle {
+      position: absolute;
+      top: 1rem;
+      right: 1.5rem;
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      padding: 0.3rem 0.65rem;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    #theme-toggle:hover { color: var(--text); border-color: var(--text-muted); }
+
+    .profile {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .profile img {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .profile-info h1 { font-size: 1.75rem; font-weight: 700; }
+    .profile-info .subtitle {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      margin-top: 0.2rem;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 0.75rem;
+      flex-wrap: wrap;
+      font-size: 0.875rem;
+    }
+
+    main { padding: 2rem 0 4rem; }
+
+    section { margin-bottom: 2.5rem; }
+
+    h2 {
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.4rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .about p { margin-bottom: 0.75rem; color: var(--text); }
+
+    mark {
+      background: var(--mark-bg);
+      color: var(--mark-color);
+      padding: 0 3px;
+      border-radius: 3px;
+    }
+
+    .entry { display: flex; gap: 1.25rem; margin-bottom: 1.5rem; }
+    .entry:last-child { margin-bottom: 0; }
+
+    .entry-meta {
+      flex-shrink: 0;
+      width: 130px;
+      text-align: right;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      padding-top: 0.15rem;
+      line-height: 1.4;
+    }
+
+    .entry-body h3 { font-size: 1rem; font-weight: 600; color: var(--text); }
+    .entry-body .role { color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.1rem; }
+    .entry-body .desc {
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      color: var(--text-desc);
+    }
+    .entry-body .desc ul { margin: 0.25rem 0 0 1.2rem; }
+    .entry-body .desc li { margin-bottom: 0.2rem; }
+
+    .skills-text { font-size: 0.9rem; color: var(--text-desc); line-height: 1.8; }
+    .skills-text p { margin-bottom: 0.5rem; }
+
+    .project-card {
+      border: 1px solid var(--card-border);
+      border-radius: 6px;
+      padding: 1rem 1.25rem;
+    }
+    .project-card h3 { font-size: 1rem; font-weight: 600; color: var(--text); }
+    .project-card .tagline { font-style: italic; color: var(--text-muted); font-size: 0.875rem; margin-top: 0.2rem; }
+    .project-card .desc { margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-desc); }
+
+    .hobbies-list {
+      list-style: disc;
+      padding-left: 1.25rem;
+      font-size: 0.9rem;
+      color: var(--text-desc);
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1.25rem 0;
+      font-size: 0.8rem;
+      color: var(--text-faint);
+      text-align: center;
+    }
+    footer a { color: var(--text-faint); }
+
+    @media (max-width: 540px) {
+      .profile { flex-direction: column; align-items: flex-start; gap: 1rem; }
+      .entry { flex-direction: column; gap: 0.25rem; }
+      .entry-meta { width: auto; text-align: left; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <button id="theme-toggle" onclick="toggleTheme()" title="Toggle dark mode">☀ Light</button>
+    <div class="profile">
+      <img src="images/portrait_compress_1.jpg" alt="Yee Yang Tee" />
+      <div class="profile-info">
+        <h1>Yee Yang Tee</h1>
+        <div class="subtitle">Used to teach machines how to see. Now leveraging talking machines to seek alpha.</div>
+        <div class="social-links">
+          <a href="https://github.com/yeeyangtee" target="_blank">GitHub</a>
+          <a href="https://linkedin.com/in/teeyeeyang" target="_blank">LinkedIn</a>
+          <a href="https://scholar.google.com/citations?user=Zu60j_gAAAAJ&hl=en" target="_blank">Google Scholar</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+
+    <section class="about">
+      <h2>About</h2>
+      <p>Hi, I'm Yee Yang — an engineer, tinkerer, and lifelong learner who loves to build products, tools, and explore new technologies. I am currently an AI Engineer at Balyasny Asset Management, applying cutting-edge AI and deep learning to solve complex problems in quantitative finance.</p>
+      <p>My goal in life is to learn as much as I can, solve challenging problems, and achieve meaningful goals. I happen to hold a PhD in Electrical and Electronic Engineering (Deep Learning, Computer Vision) from NTU Singapore.</p>
+      <p>I am most skilled in <mark>Deep Learning</mark>, <mark>Large Language Models (LLM)</mark>, and <mark>toothbrushing</mark>.</p>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+
+      <div class="entry">
+        <div class="entry-meta">2025 – Present</div>
+        <div class="entry-body">
+          <h3>Balyasny Asset Management</h3>
+          <div class="role">Artificial Intelligence Engineer</div>
+          <div class="desc">Working as an AI Engineer at a global multi-strategy hedge fund, applying machine learning and AI techniques in a quantitative finance context.</div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-meta">2024 – 2025</div>
+        <div class="entry-body">
+          <h3>American Express</h3>
+          <div class="role">Data Scientist</div>
+          <div class="desc">
+            <ul>
+              <li>Lead modeller in redeveloping an existing marketing model, creating new intelligence driving ~US$5M annual incremental revenue.</li>
+              <li>Lead modeller for building a new marketing model with estimated revenue impact of &gt;US$30M.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-meta">2020 – 2024</div>
+        <div class="entry-body">
+          <h3>Nanyang Technological University</h3>
+          <div class="role">Researcher</div>
+          <div class="desc">Pioneer candidate for the Nanyang-DSO Graduate Programme, designed to nurture technical talents in cutting-edge defence and security research. Produced 8 deliverables across 4 years as the key researcher in a project valued at approx. S$300K.</div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-meta">2022 – 2023</div>
+        <div class="entry-body">
+          <h3>The University of Texas at Austin</h3>
+          <div class="role">Visiting Research Scholar &mdash; <a href="https://vita-group.github.io" target="_blank">VITA Group</a></div>
+          <div class="desc">Collaborated with the VITA research group on computer vision research during a 6-month research exchange at UT Austin.</div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-meta">2020 – 2023</div>
+        <div class="entry-body">
+          <h3>inspections.ai</h3>
+          <div class="role">Chief Technology Officer</div>
+          <div class="desc">
+            inspections.ai develops "Visual-AI-as-a-service", using ML &amp; smart cameras to extract operational data from images and video streams.
+            <ul>
+              <li>Spearheaded technical development for 2 pilot projects with total value of approx. S$300K, successfully delivered with all KPIs achieved.</li>
+              <li>Developed 4 visual AI models for PPE detection, behaviour analysis, and construction machinery extraction from CCTVs.</li>
+              <li>Joined accelerator program @ Pier71 and connected with strategic partners in work safety hazard (WSH) companies.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-meta">2020 – 2023</div>
+        <div class="entry-body">
+          <h3>Freelance Deep Learning Consultant</h3>
+          <div class="desc">Delivered more than 10 technical projects with total value of &gt;S$200K across domains including financial modelling, trading, medical image analysis, agriculture, construction, and ergonomics. Provided advisory and hands-on implementation of deep learning techniques for clients.</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+
+      <div class="entry">
+        <div class="entry-meta">2020 – 2024</div>
+        <div class="entry-body">
+          <h3>Nanyang Technological University</h3>
+          <div class="role">Doctor of Philosophy (PhD), Electrical and Electronic Engineering</div>
+          <div class="desc">Research Area: Deep Learning, Computer Vision, Integrated Circuits. Pioneer candidate for the Nanyang-DSO Graduate Programme.</div>
+        </div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-meta">2016 – 2020</div>
+        <div class="entry-body">
+          <h3>Nanyang Technological University</h3>
+          <div class="role">Bachelor of Engineering (BEng), Electrical and Electronics Engineering</div>
+          <div class="desc">CGPA: 4.89 / 5.00 | Dean's List: AY 16/17, 17/18, 19/20. Awarded the prestigious Nanyang Scholarship and EEE Chair Award. Graduated with First Class Honours. Semester exchange at Technical University of Ostrava, Czech Republic; Silicon Valley Outreach Programme; Volunteering in Chiang Mai.</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <div class="skills-text">
+        <p><strong>Machine Learning &amp; AI:</strong> Deep Learning &middot; Computer Vision &middot; Large Language Models &middot; ML Deployment &middot; Data Analysis &middot; Quantitative Research</p>
+        <p><strong>Tools &amp; Frameworks:</strong> <mark>PyTorch</mark> &middot; <mark>HuggingFace</mark> &middot; <mark>Docker</mark> &middot; Cloud Computing</p>
+        <p><strong>Coding:</strong> Managing Claude Code &middot; Codex &middot; Claw</p>
+        <p><strong>Other:</strong> Data Scraping &middot; Management Consulting &middot; Financial Modelling</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <div class="project-card" style="margin-bottom:1rem;">
+        <h3>Construction Site Safety Hazard Detection</h3>
+        <div class="tagline">Object detection for real-time PPE and safety hazard monitoring</div>
+        <div class="desc">Built and deployed safety hazard detection models (RetinaNet, YOLO) to active construction sites, processing live video feeds from CCTV networks to flag violations in real time.</div>
+      </div>
+      <div class="project-card" style="margin-bottom:1rem;">
+        <h3>Airline Food Waste Tracker</h3>
+        <div class="tagline">Image segmentation + classification for food consumption analysis</div>
+        <div class="desc">Built a food consumption tracking application using image segmentation and classification to measure food waste on meal trays for a renowned airline — enabling data-driven reduction in waste at scale.</div>
+      </div>
+      <div class="project-card">
+        <h3><a href="https://github.com/yeeyangtee/pluribus" target="_blank">Pluribus Poker AI Bot</a></h3>
+        <div class="tagline">Implementing Facebook's Pluribus poker-playing AI</div>
+        <div class="desc">Worked on this project as a means to learn about reinforcement learning and multi-agent game theory.</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>More About Me</h2>
+      <p style="font-size:0.9rem;color:var(--text-desc);margin-bottom:0.5rem;">Alongside my interests in AI and engineering, some of my other interests and hobbies are:</p>
+      <ul class="hobbies-list">
+        <li>Scuba Diving</li>
+        <li>Hiking</li>
+        <li>Bouldering</li>
+        <li>Ocean Conservation</li>
+        <li>Overseas Volunteering</li>
+      </ul>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="container">References on request &middot; <a href="mailto:yeeyangtee@gmail.com">Contact me</a></div>
+</footer>
+
+<script>
+  const btn = document.getElementById('theme-toggle');
+
+  function applyTheme(dark) {
+    document.documentElement.classList.toggle('dark', dark);
+    btn.textContent = dark ? '☀ Light' : '🌙 Dark';
+  }
+
+  function toggleTheme() {
+    const isDark = document.documentElement.classList.contains('dark');
+    localStorage.setItem('theme', isDark ? 'light' : 'dark');
+    applyTheme(!isDark);
+  }
+
+  // Init: respect saved preference, then system preference
+  const saved = localStorage.getItem('theme');
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  applyTheme(saved ? saved === 'dark' : prefersDark);
+</script>
+
+</body>
+</html>
